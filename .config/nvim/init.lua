@@ -1,8 +1,6 @@
 --[[
 Neovim init file
 Version: 0.2.0 - 2022/04/19
-Maintainer: jwest
-Website: https://github.com/jwestjc
 --]]
 
 -- Import Lua modules
