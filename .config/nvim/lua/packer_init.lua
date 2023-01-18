@@ -46,7 +46,9 @@ return packer.startup(function(use)
 
   -- LSP Config
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  -- use 'williamboman/nvim-lsp-installer'
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Autocomplete
