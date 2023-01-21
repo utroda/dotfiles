@@ -13,7 +13,6 @@ local opts = {
       ".git/",
       ".cache",
       "%.o",
-      "%.a",
       "%.out",
       "%.class",
       "%.pdf",
@@ -25,12 +24,12 @@ local opts = {
     sorting_strategy = "ascending",
     set_env = { ["COLORTERM"] = "truecolor" },
     extensions = {
-      fzf = {
-        fuzzy = true,
-        override_generic_sorter = true,
-        override_file_sorter = true,
-        case_mode = "ignore_case",
-      },
+      -- fzf = {
+      --  fuzzy = true,
+      --  override_generic_sorter = true,
+      --  override_file_sorter = true,
+      --  case_mode = "ignore_case",
+      --},
     },
     vimgrep_arguments = {
       "rg",
