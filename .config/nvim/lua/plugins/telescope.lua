@@ -4,12 +4,13 @@ local opts = {
   defaults = {
     layout_strategy = "vertical",
     layout_config = {
-      vertical = { 
+      vertical = {
         height =  0.75,
         preview_width = 0.25,
       },
     },
     file_ignore_patterns = {
+      "node_modules/",
       ".git/",
       ".cache",
       "%.o",

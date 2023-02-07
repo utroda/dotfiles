@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["kanagawa.nvim"] = {
-    loaded = true,
-    path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
-    url = "https://github.com/rebelot/kanagawa.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -175,11 +170,6 @@ _G.packer_plugins = {
     path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["symbols-outline.nvim"] = {
-    loaded = true,
-    path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
-    url = "https://github.com/simrat39/symbols-outline.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -189,6 +179,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/utroda/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   }
 }
 

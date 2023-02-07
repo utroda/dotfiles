@@ -21,4 +21,4 @@
 -- vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 
 -- Load the colorscheme
-vim.cmd[[colorscheme kanagawa]]
+vim.cmd[[colorscheme tokyonight]]

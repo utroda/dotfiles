@@ -86,16 +86,21 @@ return packer.startup(function(use)
     end
   }
 
+  use {
+    'folke/todo-comments.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+    }
+  }
+
   -- Status Line
   use 'nvim-lualine/lualine.nvim'
 
-  use 'simrat39/symbols-outline.nvim'
-
   -- Color schemes
   -- use 'navarasu/onedark.nvim'
-  -- use 'folke/tokyonight.nvim'
+   use 'folke/tokyonight.nvim'
   -- use 'vv9k/bogster'
-  use "rebelot/kanagawa.nvim"
+  -- use "rebelot/kanagawa.nvim"
 
   -- Automatically set up your config after cloning packer.nvim
   if packer_bootstrap then
