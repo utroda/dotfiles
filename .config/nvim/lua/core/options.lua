@@ -12,6 +12,10 @@ local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+g.termguicolors = true
+
 opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noselect'  -- Autocomplete options
@@ -77,7 +81,8 @@ local disabled_built_ins = {
   "logipat",
   "rrhelper",
   "spellfile_plugin",
-  "matchit"
+  "matchit",
+  "nosplitright"
 }
 
 for _, plugin in pairs(disabled_built_ins) do

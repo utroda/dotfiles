@@ -10,7 +10,7 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Change leader to a comma
+-- Change leader to a space
 vim.g.mapleader = ' '
 
 -----------------------------------------------------------
@@ -20,6 +20,7 @@ map('i', 'jj', '<Esc>')
 map('n', '<leader>t', '<C-^>')
 map('n', '<C-p>', '<cmd>Telescope find_files<cr>')
 map('n', '<C-t>', '<cmd>Telescope treesitter<cr>')
+map('n', '<leader>f', '<cmd>NvimTreeToggle<cr>')
 map('n', '<leader>sg', '<cmd>Telescope live_grep<cr>')
 map('n', '<leader>sc', '<cmd>Telescope git_commits<cr>')
 map('n', '<leader>sb', '<cmd>Telescope git_branches<cr>')

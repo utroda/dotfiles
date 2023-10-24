@@ -96,11 +96,20 @@ return packer.startup(function(use)
   -- Status Line
   use 'nvim-lualine/lualine.nvim'
 
+  -- NvimTree
+  use 'nvim-tree/nvim-tree.lua';
+
+  -- Prisma
+  use 'prisma/vim-prisma'
+
   -- Color schemes
+  -- use 'haishanh/night-owl.vim'
   -- use 'navarasu/onedark.nvim'
-   use 'folke/tokyonight.nvim'
+  -- use 'folke/tokyonight.nvim'
+  use "EdenEast/nightfox.nvim"
+  -- use "lunarvim/synthwave84.nvim"
   -- use 'vv9k/bogster'
-  -- use "rebelot/kanagawa.nvim"
+  use "rebelot/kanagawa.nvim"
 
   -- Automatically set up your config after cloning packer.nvim
   if packer_bootstrap then

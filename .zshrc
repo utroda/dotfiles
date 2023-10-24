@@ -99,6 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias v="nvim"
 alias www="cd ~/github"
+alias gitc="git branch | grep -v "main" | xargs git branch -D"
+alias gitp="git remote prune origin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

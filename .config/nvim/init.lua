@@ -18,3 +18,5 @@ require('plugins/handlers').setup();
 require('plugins/null-ls').setup();
 require('plugins/blankline').setup();
 require('plugins/lualine').setup();
+require('plugins/themes').setup();
+require('plugins/nvim-tree').setup();

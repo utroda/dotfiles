@@ -19,6 +19,8 @@
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 -- vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
-
+--
 -- Load the colorscheme
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme kanagawa-wave]]
+
+
