@@ -1,22 +1,15 @@
---[[
-Neovim init file
-Version: 0.2.0 - 2022/04/19
---]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- Import Lua modules
-require('packer_init');
-require('core/options');
-require('core/autocmds');
-require('core/keymaps');
-require('core/colors');
-require('plugins/cmp').setup();
-require('plugins/telescope').setup();
-require('plugins/treesitter').setup();
-require('plugins/todo').setup();
-require('plugins/lspconfig');
-require('plugins/handlers').setup();
-require('plugins/null-ls').setup();
-require('plugins/blankline').setup();
-require('plugins/lualine').setup();
-require('plugins/themes').setup();
-require('plugins/nvim-tree').setup();
+require("vim-options")
+require("lazy").setup("plugins")

@@ -1,4 +1,47 @@
 -----------------------------------------------------------
+-- Define keymaps of Neovim and installed plugins.
+-----------------------------------------------------------
+
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+
+-- Change leader to a space
+vim.g.mapleader = ' '
+
+-----------------------------------------------------------
+-- Neovim shortcuts
+-----------------------------------------------------------
+map('i', 'jj', '<Esc>')
+map('n', '<leader>t', '<C-^>')
+map('n', 'Y', 'y$')
+
+-- keep in center of screen
+map('n', 'n', 'nzzzv')
+map('n', 'N', 'Nzzzv')
+map('n', 'J', 'mzJ`v')
+
+ -- See `:help K` for why this keymap
+-- map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>')
+-- map('n', '<leader>K', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition<cr>')
+-- map('n', 'gI', '<cmd>lua vim.lsp.buf.implementation<cr>')
+--
+-- Navigate vim panes better
+map('n', '<c-k>', ':wincmd k<CR>')
+map('n', '<c-j>', ':wincmd j<CR>')
+map('n', '<c-h>', ':wincmd h<CR>')
+map('n', '<c-l>', ':wincmd l<CR>')
+
+map('n', '<leader>h', ':nohlsearch<CR>')
+
+-----------------------------------------------------------
 -- General Neovim settings and configuration
 -----------------------------------------------------------
 
@@ -18,7 +61,7 @@ g.termguicolors = true
 
 opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
-opt.completeopt = 'menuone,noselect'  -- Autocomplete options
+opt.completeopt = 'menu,menuone,noselect'  -- Autocomplete options
 
 -----------------------------------------------------------
 -- Neovim UI
@@ -88,3 +131,4 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
   g["loaded_" .. plugin] = 1
 end
+

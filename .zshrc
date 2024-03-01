@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+#ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,9 +101,15 @@ alias v="nvim"
 alias www="cd ~/github"
 alias gitc="git branch | grep -v "main" | xargs git branch -D"
 alias gitp="git remote prune origin"
+alias ls=' exa --group-directories-first'
+alias la='ls -a'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source "/Users/utroda/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+export PATH="/Users/utroda/.deno/bin:$PATH" #adding DENO
+
+# source "/Users/utroda/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
+eval "$(starship init zsh)"
